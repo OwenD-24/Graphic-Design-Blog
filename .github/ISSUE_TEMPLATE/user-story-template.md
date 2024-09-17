@@ -7,8 +7,4 @@ assignees: OwenD-24
 
 ---
 
-As a: ROLE
-
-I can: CAPABILITY
-
-So that: RECEIVED BENEFIT
+As a ROLE, I CAN CAPABILITY, SO THAT RECEIVED BENEFIT
