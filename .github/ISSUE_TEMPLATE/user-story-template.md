@@ -3,7 +3,7 @@ name: User Story Template
 about: A template for basic user stories
 title: 'USER STROY: Graphic Design Blog'
 labels: ''
-assignees: ''
+assignees: OwenD-24
 
 ---
 
