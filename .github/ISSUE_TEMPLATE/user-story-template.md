@@ -1,7 +1,7 @@
 ---
 name: User Story Template
 about: A template for basic user stories
-title: 'USER STROY: Graphic Design Blog'
+title: 'USER STORY: Graphic Design Blog'
 labels: ''
 assignees: OwenD-24
 
