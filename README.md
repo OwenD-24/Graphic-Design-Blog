@@ -1,4 +1,4 @@
-Graphic Design Blog
+# Graphic Design Blog
 
 Table of Contents
 
