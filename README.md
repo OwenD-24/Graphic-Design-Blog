@@ -1,4 +1,5 @@
 Graphic Design Blog
+
 Table of Contents
 
 - Project Overview
