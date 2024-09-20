@@ -1,16 +1,16 @@
-/* ---------------------------------- About Section Styles*/
-.content-section {
-    background-color: #ffffff; 
-    border-radius: 10px;       
-    padding: 20px;             
-    margin: 20px auto;         
-    max-width: 800px;          
+/*------------------------------------ Body and Heading Styling*/
+body {
+    background-color: rgb(56, 56, 56);
+    margin-top: 5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-h1 {
-    color: #444444;            
+h1, h2, h3, h4, h5, h6, p {
+    color: #444444;
+    font-family: 'Poppins', sans-serif;
 }
 
-p {
-    color: #666666;            
+ul {
+    margin: 0;
 }
