@@ -21,16 +21,42 @@ ul {
 }
 
 /*------------------------------------ Navbar Link Styling */
-.site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+.nav-item {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
-.site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
+#auth-links {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+#auth-links span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+#auth-links:hover span {
+    transform: translateX(0);
 }
 
 /*----------------------------------- About Content Styling */
