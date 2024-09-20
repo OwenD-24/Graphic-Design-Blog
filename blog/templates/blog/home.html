@@ -1,23 +1,11 @@
+{% extends 'blog/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-        <title>{{ title }}</title>
-    {% else %}
-        <title>Graphics Blog</title>
-    {% endif %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% block content %}
     <h1>Blog Home</h1>
     <hr>
-    {% for posts in posts %}
-        <h3>{{ posts.title }}</h3>
-        <p>By: {{ posts.author }} on {{ posts.date_posted }}</p>
-        <p>{{ posts.content }}</p> <br>
-    {% endfor %}
-</body>
-</html>
+{% for posts in posts %}
+    <h3>{{ posts.title }}</h3>
+    <p>By: {{ posts.author }} on {{ posts.date_posted }}</p>
+    <p>{{ posts.content }}</p> <br>
+{% endfor %}
+{% endblock content %}
