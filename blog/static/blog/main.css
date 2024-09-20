@@ -15,7 +15,20 @@ ul {
     margin: 0;
 }
 
-/*------------------------------------ Background Graident Styling */
+/*------------------------------------ Background Gradient Styling */
 .bg-steel {
     background: linear-gradient(270deg, rgb(49, 0, 33) 0%, rgb(46, 0, 119) 100%);
+}
+
+/*------------------------------------ Navbar Link Styling */
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
 }
