@@ -110,3 +110,29 @@ ul {
 .alert-info {
     background-color: #17a2b8;
 }
+
+/*----------------------------------- Sidebar content section */
+.content-section {
+    background-color: #f8f9fa; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin-top: 20px; 
+}
+
+#list-group {
+    color: #343a40; 
+    transition: background-color 0.3s;
+}
+
+#list-group:hover {
+    background-color: #e9ecef;
+}
+
+.fs-5 {
+    font-size: 1.25rem; 
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
