@@ -14,3 +14,8 @@ h1, h2, h3, h4, h5, h6, p {
 ul {
     margin: 0;
 }
+
+/*------------------------------------ Background Graident Styling */
+.bg-steel {
+    background: linear-gradient(270deg, rgb(49, 0, 33) 0%, rgb(46, 0, 119) 100%);
+}
