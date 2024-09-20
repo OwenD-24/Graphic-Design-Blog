@@ -32,3 +32,20 @@ ul {
 .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
 }
+
+/*----------------------------------- About Content Styling */
+.content-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    line-height: 1.6;
+}
