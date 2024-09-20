@@ -63,13 +63,22 @@
                 </a>
                 {% endif %}
     </header>
-
-    <!-- Content Block Section -->
-    <main class="content-section">
-        {% block content %}{% endblock %}
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {%  if messages%}
+                  {% for message in messages %}
+                      <div class="alert-{{ message.tags }}">
+                          {{ message }}
+                      </div>
+                  {% endfor %}
+                {% endif %}
+            </div>
+          <div class="col-md-8">
+             {% block content %}{% endblock %}
+          </div>
     </main>
 
-    <!-- Footer Section -->
 </body>
 
 </html>
