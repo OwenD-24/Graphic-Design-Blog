@@ -20,8 +20,8 @@
             <a class="navbar-brand" href="{% url 'home' %}">Graphic Design Blog</a>
             <div class="collapse navbar-collapse">
                 {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
-                <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
+                <a class="nav-item nav-link" href="{% url 'home' %}">HOME</a>
+                <a class="nav-item nav-link" href="{% url 'about' %}">ABOUT</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
