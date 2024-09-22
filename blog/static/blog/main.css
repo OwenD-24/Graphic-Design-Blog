@@ -76,7 +76,7 @@ ul {
     line-height: 1.6;
 }
 
-/*----------------------------------- Main content section */
+/*----------------------------------- Main Content Section */
 .container {
     padding: 20px;
     margin-top: 20px;
@@ -111,7 +111,7 @@ ul {
     background-color: #17a2b8;
 }
 
-/*----------------------------------- Sidebar content section */
+/*----------------------------------- Sidebar Content Section */
 .content-section {
     background-color: #f8f9fa; 
     border-radius: 5px; 
@@ -135,4 +135,31 @@ ul {
 
 .fw-semibold {
     font-weight: 600;
+}
+
+/*----------------------------------- Post Content Section */
+.post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.post p {
+    color: #666;
+}
+
+.post a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.post a:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<section class="content-section">
+    <div class="container">
+        <h1>{{ post.title }}</h1>
+        <p>by {{ post.author }} on {{ post.date_posted }}</p>
+        <div class="post-content">
+            <p>{{ post.content }}</p>
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+</section>
+{% endblock %}

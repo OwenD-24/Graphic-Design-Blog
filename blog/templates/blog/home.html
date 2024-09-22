@@ -14,8 +14,9 @@
         <h2>Recent Posts</h2>
         {% for post in posts %}
             <div class="cardd">
-                <h3><a href="">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
+                <h3><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h3>
+                <p>{{ post.content|truncatewords:30 }}</p>
+                <p>by {{ post.author }} on {{ post.date_posted }}</p>
             </div>
         {% empty %}
             <p>No posts have been published yet.</p>
