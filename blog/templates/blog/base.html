@@ -79,7 +79,7 @@
                 <div class="container mt-4">
                     <div class="row">
                         <div class="col-md-8">
-                            <h2>Latest Posts</h2>
+                            <h2>Latest Projects</h2>
                             {% for posts in Post %}
                             <article class="post">
                                 <h3>{{ post.title }}</h3>
@@ -101,10 +101,36 @@
                     style="width: 380px; padding-top: 20px;">
                     <a id="list-group" href="#"
                         class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                        <span class="fs-5 fw-semibold" id="gist-btn">Latest Gist</span>
+                        <span class="fs-5 fw-semibold" id="gist-btn">Latest Projects</span>
                     </a>
+                    <div class="list-group list-group-flush border-bottom scrollarea">
+                        <a href="#" class="list-group-item list-group-item-action  lh-tight" aria-current="true">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <strong class="mb-1">Teaching the Basics of Design... by User
+                                </strong>
+                                <small>Wed</small>
+                            </div>
+                            <div class="col-10 mb-1 small">Design Principles... by User </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <strong class="mb-1">Practice Makes Perfect... by User</strong>
+                                <small class="text-muted">Tues</small>
+                            </div>
+                            <div class="col-10 mb-1 small">Graphics Desing in Coding... by User</div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <strong class="mb-1">I wanted to be a great designer but...by User</strong>
+                                <small class="text-muted">Mon</small>
+                            </div>
+                            <div class="col-10 mb-1 small">What makes a Good Designer...</div>
+                        </a>
+
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
     </main>
