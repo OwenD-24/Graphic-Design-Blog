@@ -3,153 +3,150 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Graphic Design Blog{% endblock %}</title>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Styling Links -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-steel">
-
-    <!-- Navbar Section -->
+<body>
+    <!-- Header and Navbar Section -->
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="{% url 'blog-home' %}">Graphic Design Blog</a>
-            <div class="collapse navbar-collapse">
-                {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
-                <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
-                <a class="nav-item nav-link" href="{% url 'login' %}">LOGIN</a>
-                <a class="nav-item nav-link" href="{% url 'register' %}">REGISTER</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-                <a href="" id="auth-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Create Post
-                </a>
-                <a href="" id="auth-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Profile
-                </a>
-                <a href="" id="auth-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Logout
-                </a>
-                {% else %}
-                <a href="" id="auth-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Login
-                </a>
-                <a href="" id="auth-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Register
-                </a>
-                {% endif %}
-    </header>
-    <main role="main" class="container">
-        <div class="row">
-            <div class="col-md-8">
-                {%  if messages%}
-                {% for message in messages %}
-                <div class="alert-{{ message.tags }}">
-                    {{ message }}
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <svg style="padding-right: 10px;" id="Capa_1" enable-background="new 0 0 512 512" height="512"
+                    viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <!-- Background Shapes -->
+                        <g>
+                            <path d="m512 45c0-24.853-20.147-45-45-45h-422c-24.853 0-45 20.147-45 45v90c0 8.284 6.716 15 15 15h482c8.284 0 15-6.716 15-15z"
+                                fill="#7d81e7" />
+                            <path d="m467 0h-211v150h241c8.284 0 15-6.716 15-15v-90c0-24.853-20.147-45-45-45z"
+                                fill="#5e69e2" />
+                        </g>
+                        <!-- Lights Icons -->
+                        <g>
+                            <path d="m81 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z"
+                                fill="#fff79f" />
+                            <path d="m161 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z"
+                                fill="#90e36a" />
+                            <path d="m241 82.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z"
+                                fill="#ff80a7" />
+                        </g>
+                    </g>
+                </svg>
+
+                <!-- Navbar Toggler for Mobile View -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                        {% if user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
+                            <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
+                        {% endif %}
+                    </div>
+
+                    <!-- Authentication Links (Right Side) -->
+                    <div class="navbar-nav">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'blog-new' %}" class="nav-item nav-link" id="auth-links">Post Your Work!</a>
+                            <a href="{% url 'profile' %}" class="nav-item nav-link" id="auth-links">Profile!</a>
+                            <a href="{% url 'logout' %}" class="nav-item nav-link" id="auth-links">Logout!</a>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="nav-item nav-link" id="auth-links">Login!</a>
+                            <a href="{% url 'register' %}" class="nav-item nav-link" id="auth-links">Register Here!</a>
+                        {% endif %}
+                    </div>
                 </div>
-                {% endfor %}
-                {% endif %}
             </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main role="main" class="container mt-5 pt-5">
+        <div class="row">
+            <!-- Left Column (Blog Content) -->
             <div class="col-md-8">
-                {% block content %}
-                <div class="container mt-4">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h2>Latest Projects</h2>
-                            {% for posts in Post %}
-                            <article class="post">
-                                <h3>{{ post.title }}</h3>
-                                <p>by {{ post.author }} on {{ post.created_on }}</p>
-                                <p>{{ post.content|truncatewords:30 }}</p>
-                                <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Read more</a>
-                            </article>
-                            <hr>
-                            {% endfor %}
+                {% if messages %}
+                    <!-- Display Flash Messages -->
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <!-- Block Content Section -->
+                {% block content %}{% endblock %}
+            </div>
+
+            <!-- Right Column (Sidebar for Latest Projects) -->
+            <div class="col-md-4">
+                <div class="content-section">
+                    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+                        <a id="list-group" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-5 fw-semibold" id="gist-btn">Latest Projects</span>
+                        </a>
+
+                        <!-- List of Latest Projects -->
+                        <div class="list-group list-group-flush border-bottom scrollarea">
+                            <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                    <strong class="mb-1">Teaching the Basics of Design... by User</strong>
+                                    <small>Wed</small>
+                                </div>
+                                <div class="col-10 mb-1 small">Design Principles... by User</div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                    <strong class="mb-1">Practice Makes Perfect... by User</strong>
+                                    <small>Tues</small>
+                                </div>
+                                <div class="col-10 mb-1 small">Graphics Design in Coding... by User</div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                    <strong class="mb-1">I wanted to be a good designer but... by User</strong>
+                                    <small>Mon</small>
+                                </div>
+                                <div class="col-10 mb-1 small">...</div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                {% endblock %}
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="content-section">
-                <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
-                    style="width: 380px; padding-top: 20px;">
-                    <a id="list-group" href="#"
-                        class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                        <span class="fs-5 fw-semibold" id="gist-btn">Latest Projects</span>
-                    </a>
-                    <div class="list-group list-group-flush border-bottom scrollarea">
-                        <a href="#" class="list-group-item list-group-item-action  lh-tight" aria-current="true">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">Teaching the Basics of Design... by User
-                                </strong>
-                                <small>Wed</small>
-                            </div>
-                            <div class="col-10 mb-1 small">Design Principles... by User </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">Practice Makes Perfect... by User</strong>
-                                <small class="text-muted">Tues</small>
-                            </div>
-                            <div class="col-10 mb-1 small">Graphics Desing in Coding... by User</div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">I wanted to be a great designer but...by User</strong>
-                                <small class="text-muted">Mon</small>
-                            </div>
-                            <div class="col-10 mb-1 small">What makes a Good Designer...</div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- Footer Section -->
-        <footer class="">
-            <ul class="nav justify-content-center border-bottom" style="margin-top: 60px;">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="admin/" class="nav-link px-2 text-muted">Admin</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-
-            </ul>
-            <p><a class="nav-item nav-link" href="{% url 'login' %}">Login</a></p>
-            <p class="text-center text-muted">&copy; Designers 2024</p>
-        </footer>
-
     </main>
 
+    <!-- Footer Section -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2024 Designers Blog Page. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9v/ScQsAP7hUibX39j3z6fqJ5K1w5TIU6j6" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
