@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'blog',
     'users',
     'crispy_forms',
+    'crispy_bootstrap4',
     'cloudinary_storage',
     'cloudinary',
 ]
