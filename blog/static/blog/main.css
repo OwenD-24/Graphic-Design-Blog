@@ -8,6 +8,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 /*--------------------------------Typography */
 h1, h2, h3, h4, h5, h6, p {
     color: #444444;
@@ -123,19 +131,22 @@ a.article-title:hover {
 /*--------------------------------Button Styling */
 button {
     font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #050801;
     border: none;
     padding: 8px;
-    color: white;
-    background-color: #000;
     cursor: pointer;
-    width: 100%;
     font-size: 18px;
-    transition: 1s;
-    background: linear-gradient(270deg, rgb(247, 0, 255) 0%, rgb(98, 0, 255) 100%);
 }
 
 button:hover {
     opacity: 0.7;
+    background: none;
+    color: #d3d3d3;
+}
+
+button:focus {
+    outline: none;
 }
 
 /*--------------------------------Card Styling */
@@ -152,4 +163,31 @@ button:hover {
     margin-top: 20px;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.486);
     border-radius: 50px;
+}
+
+/*--------------------------------Footer Section */
+footer {
+    background: linear-gradient(270deg, #d3d3d3, #002f4b);
+    color: white; 
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+footer a {
+    color: #03e9f4; 
+    text-decoration: none; 
+    margin: 0 10px; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.footer .text-muted {
+    color: black !important; 
 }
