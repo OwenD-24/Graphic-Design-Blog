@@ -48,17 +48,49 @@ ul {
     font-weight: 500;
 }
 
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .site-header .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-header .navbar-brand img {
+        max-width: 150px; 
+        height: auto;
+    }
+
+    .site-header .navbar-toggler {
+        background-color: #03e9f4; 
+    }
+
+    .navbar-collapse {
+        background-color: #002f4b;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #ffffff; 
+        padding: 10px 20px; 
+    }
+
+    .navbar-collapse .nav-link:hover {
+        color: #03e9f4; 
+    }
+}
+
 /*--------------------------------Content Section */
 .content-section {
-    background: rgba(255, 255, 255, 0.75); /* 75% opacity white background */
-    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.75); 
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 /*--------------------------------Article Styling */
 .article-title {
     color: #444444;
+    margin: 0 0 10px;
 }
 
 a.article-title:hover {
@@ -68,6 +100,16 @@ a.article-title:hover {
 
 .article-content {
     white-space: pre-line;
+    margin-bottom: 10px;
+}
+
+.article-box {
+    display: flex;
+    align-items: flex-start;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .article-img {
@@ -102,10 +144,12 @@ a.article-title:hover {
     width: 125px;
     margin-right: 20px;
     margin-bottom: 16px;
+    transition: transform 0.3s;
 }
 
 .account-heading {
     font-size: 2.5rem;
+    transform: scale(1.05);
 }
 
 /*--------------------------------Authentication Links Styling */
@@ -142,7 +186,6 @@ button {
 button:hover {
     opacity: 0.7;
     background: none;
-
 }
 
 button:focus {
@@ -191,3 +234,5 @@ footer a:hover {
 .footer .text-muted {
     color: black !important; 
 }
+
+
