@@ -1,13 +1,9 @@
-from .models import Post
-from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
-
-# def home(request):
-    # posts = Post.objects.all()
-    # return render(request, 'blog/home.html', {'posts': posts})
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from .models import Post
 
 def about(request):
     return render(request, 'blog/about.html', {'title': "About Page"})
@@ -48,9 +44,9 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
-class PostDeleteView(DeleteView):
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/'
+    success_url = reverse_lazy('blog-home')
 
     def test_func(self):
         post = self.get_object()
