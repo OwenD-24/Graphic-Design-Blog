@@ -1,11 +1,10 @@
 /*--------------------------------General Page Styling */
 body {
     background: linear-gradient(to bottom right, #d3d3d3, #002f4b);
-    margin-top: 5rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #333333;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
+    color: #333333;
 }
 
 html, body {
@@ -48,7 +47,7 @@ ul {
     font-weight: 500;
 }
 
-/* For mobile responsiveness */
+/*--------------------------------For mobile responsiveness */
 @media (max-width: 768px) {
     .site-header .navbar {
         flex-direction: column;
@@ -80,10 +79,74 @@ ul {
 
 /*--------------------------------Content Section */
 .content-section {
-    background: rgba(255, 255, 255, 0.75); 
-    padding: 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin: 20px 0; 
+}
+
+/*--------------------------------Post Grid Layout */
+.posts-grid {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    width: 65%;
+}
+
+.post-box {
+    background-color: #d3d3d3; 
+    color: #000; 
+    padding: 15px;
     border-radius: 10px;
-    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: center; 
+}
+
+.post-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.posts-wrapper {
+    margin-bottom: 20px;
+}
+
+/*--------------------------------Latest Projects Section */
+.latest-projects {
+    background-color: d3d3d3; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 94.5%; 
+    margin: 10px auto; 
+    text-align: left; 
+    box-sizing: border-box; 
+}
+
+.latest-projects-container {
+    margin-top: 20px;
+}
+
+/*--------------------------------Responsive adjustments */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; 
+    }
+
+    .latest-projects {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .posts-grid {
+        margin-left: 0; 
+    }
 }
 
 /*--------------------------------About Page Styling */
@@ -192,7 +255,6 @@ button {
 
 button:hover {
     opacity: 0.7;
-    background: none;
 }
 
 button:focus {
@@ -201,7 +263,7 @@ button:focus {
 
 /*--------------------------------Card Styling */
 .cardd {
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.849);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.849);
     max-width: 700px;
     margin: auto;
     text-align: center;
@@ -211,7 +273,7 @@ button:focus {
 /*--------------------------------Profile Image */
 #profile-img {
     margin-top: 20px;
-    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.486);
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.486);
     border-radius: 50px;
 }
 
@@ -222,9 +284,7 @@ footer {
     padding: 10px 0;
     text-align: center;
     flex-shrink: 0;
-    position: relative;
     width: 100%;
-    height: auto;
 }
 
 footer a {
@@ -241,5 +301,3 @@ footer a:hover {
 .footer .text-muted {
     color: black !important; 
 }
-
-
