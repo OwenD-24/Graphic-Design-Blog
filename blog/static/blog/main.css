@@ -1,16 +1,11 @@
 /*--------------------------------General Page Styling */
-body {
-    background: linear-gradient(to bottom right, #d3d3d3, #002f4b);
+html, body {
+    max-height: 100%;
+    background: linear-gradient(to bottom right, #999999, #002f4b);
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: #333333;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -28,14 +23,16 @@ ul {
 .site-header .navbar {
     max-height: 80px;
     padding: 10px 20px;
-    background-color: #002f4b;
+    background: linear-gradient(to bottom right, #999999, #002f4b);
     position: fixed;
     width: 100%;
     z-index: 10;
+    border-bottom: 2px solid #042f47;
+    box-shadow: 0 4px 8px #042f47;
 }
 
 .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #ffffff;
     padding: 10px 15px;
 }
 
@@ -45,6 +42,11 @@ ul {
 
 .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
+}
+
+.navbar-logo {
+    max-height: 100px; 
+    max-width: 150px; 
 }
 
 /*--------------------------------For mobile responsiveness */

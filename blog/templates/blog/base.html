@@ -16,30 +16,31 @@
 
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
-                <img src="{% static 'media/default.jpg' %}" alt="Logo" style="padding-right: 10px;">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        {% if user.is_authenticated %}
-                        <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
-                        <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
-                        {% endif %}
-                    </div>
-                    <div class="navbar-nav">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'blog-new' %}" class="nav-item nav-link">Post Your Work!</a>
-                        <a href="{% url 'profile' %}" class="nav-item nav-link">Profile!</a>
-                        <a href="{% url 'logout' %}" class="nav-item nav-link">Logout!</a>
-                        {% else %}
-                        <a href="{% url 'login' %}" class="nav-item nav-link">Login!</a>
-                        <a href="{% url 'register' %}" class="nav-item nav-link">Register Here!</a>
-                        {% endif %}
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'blog-home' %}">
+                <img src="{% static 'media/logo.png' %}" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                    {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
+                    <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
+                    {% endif %}
                 </div>
+                <div class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'blog-new' %}" class="nav-item nav-link">Post Your Work!</a>
+                    <a href="{% url 'profile' %}" class="nav-item nav-link">Profile!</a>
+                    <a href="{% url 'logout' %}" class="nav-item nav-link">Logout!</a>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="nav-item nav-link">Login!</a>
+                    <a href="{% url 'register' %}" class="nav-item nav-link">Register Here!</a>
+                    {% endif %}
+                </div>
+            </div>
             </div>
         </nav>
     </header>
