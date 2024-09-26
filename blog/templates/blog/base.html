@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="home-page">
     <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="{% url 'blog-home' %}">
@@ -97,6 +97,7 @@
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
             <span class="text-muted">&copy; 2024 Designers Blog Page. All rights reserved.</span>
+            <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
         </div>
     </footer>
 

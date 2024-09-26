@@ -1,13 +1,47 @@
-/*--------------------------------General Page Styling */
-html, body {
-    max-height: 100%;
-    background: linear-gradient(to bottom right, #999999, #002f4b);
+/*--------------------------------Reset margin/padding for all elements */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*--------------------------------General Page Styling */
+html, body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #333333;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom right, #999999, #002f4b); 
+    background-size: cover;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding-bottom: 0; 
+    margin-bottom: 0;
+}
+
+.home-page main, .about-container, .content-section {
+    flex-grow: 1; 
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.home-page footer {
+    position: relative;
+    margin-top: auto; 
+    flex-shrink: 0;
 }
 
 /*--------------------------------Typography */
@@ -84,7 +118,7 @@ ul {
     display: flex; 
     justify-content: space-between;
     align-items: flex-start; 
-    margin: 20px 0; 
+    flex-grow: 1;
 }
 
 /*--------------------------------Post Grid Layout */
@@ -92,11 +126,12 @@ ul {
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
-    width: 65%;
+    width: 100%; /* Use full width */
+    padding-bottom: 20px;
 }
 
 .post-box {
-    background-color: #d3d3d3; 
+    background-color: white; 
     color: #000; 
     padding: 15px;
     border-radius: 10px;
@@ -106,6 +141,7 @@ ul {
     flex-direction: column; 
     align-items: center;
     text-align: center; 
+    margin: 10px 0; 
 }
 
 .post-box:hover {
@@ -114,14 +150,15 @@ ul {
 }
 
 .posts-wrapper {
-    margin-bottom: 20px;
+    width: 100%; 
+    padding: 0; 
+    margin: 0; 
 }
 
 /*--------------------------------Latest Projects Section */
 .latest-projects {
-    background-color: d3d3d3; 
+    background-color: #d3d3d3; 
     padding: 20px; 
-    border: 1px solid #ddd; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     width: 94.5%; 
@@ -153,10 +190,11 @@ ul {
 
 /*--------------------------------About Page Styling */
 .about-container {
-    background: white;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding-bottom: 20px;
 }
 
 /*--------------------------------Article Styling */
@@ -285,19 +323,21 @@ footer {
     color: white; 
     padding: 10px 0;
     text-align: center;
-    flex-shrink: 0;
+    flex-shrink: 0; 
     width: 100%;
+    position: relative; 
+    margin-top: auto;
 }
 
 footer a {
-    color: #03e9f4; 
+    color: #ffffff; 
     text-decoration: none; 
     margin: 0 10px; 
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #ffffff;
+    color: #03e9f4;
 }
 
 .footer .text-muted {
