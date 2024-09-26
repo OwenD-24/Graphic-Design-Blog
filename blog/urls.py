@@ -1,6 +1,8 @@
 from django.urls import path
+
 from . import views
-from .views import PostListView, PostDetailView, PostCreateView, PostDeleteView, PostUpdateView
+from .views import (PostCreateView, PostDeleteView, PostDetailView,
+                    PostListView, PostUpdateView)
 
 urlpatterns = [
     path('about/', views.about, name="blog-about"),

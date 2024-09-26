@@ -1,9 +1,12 @@
-from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+
 from .models import Post
+
 
 def about(request):
     return render(request, 'blog/about.html', {'title': "About Page"})
