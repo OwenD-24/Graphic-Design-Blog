@@ -20,15 +20,13 @@ html, body {
     flex-direction: column;
     background: linear-gradient(to bottom right, #999999, #002f4b); 
     background-size: cover;
+    min-height: 100vh;
 }
 
 main {
     flex-grow: 1;
     display: flex;  
     flex-direction: column; 
-    justify-content: flex-start; 
-    padding-bottom: 0; 
-    margin-bottom: 0;
 }
 
 .home-page main, .about-container, .content-section {
@@ -46,11 +44,20 @@ main {
 
 /*--------------------------------Typography */
 h1, h2, h3, h4, h5, h6, p {
-    color: #444444;
+    color: #222222;
 }
 
 ul {
     margin: 0;
+}
+
+/*--------------------------------Post Metadata (Date & Username) */
+.post-meta, .post-meta a {
+    color: #444444;
+}
+
+.post-meta a:hover {
+    color: #666666; 
 }
 
 /*--------------------------------Navbar Styling */
@@ -61,8 +68,8 @@ ul {
     position: fixed;
     width: 100%;
     z-index: 10;
-    border-bottom: 2px solid #042f47;
-    box-shadow: 0 4px 8px #042f47;
+    border-bottom: 2px solid #414141;
+    box-shadow: 0 4px 8px #424242;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -132,7 +139,7 @@ ul {
 
 .post-box {
     background-color: white; 
-    color: #000; 
+    color: #222222; 
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -260,6 +267,11 @@ a.article-title:hover {
 .account-heading {
     font-size: 2.5rem;
     transform: scale(1.05);
+    color: #222222;
+}
+
+.profile-details {
+    color: #333333; 
 }
 
 /*--------------------------------Authentication Links Styling */
@@ -272,7 +284,8 @@ a.article-title:hover {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-right: 5px;
-    transition: 0.5s;
+    transition: transform 0.3s, color 0.3s;
+    font-size: 1.5rem;
 }
 
 #auth-links:hover {
@@ -280,6 +293,7 @@ a.article-title:hover {
     background: #03e9f4;
     color: #050801;
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    transform: scale(1.1);
 }
 
 /*--------------------------------Button Styling */
@@ -303,18 +317,28 @@ button:focus {
 
 /*--------------------------------Card Styling */
 .cardd {
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.849);
     max-width: 700px;
     margin: auto;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 20px;
+    background: transparent;
+
 }
 
 /*--------------------------------Profile Image */
 #profile-img {
     margin-top: 20px;
-    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.486);
-    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+}
+
+/*--------------------------------Profile Heading */
+#profile-h1 {
+    font-size: 2rem; 
+    font-weight: 600; 
+    margin-top: 5px; 
+    color: #222; 
+    text-align: center;
 }
 
 /*--------------------------------Footer Section */
