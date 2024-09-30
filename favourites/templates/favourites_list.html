@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="favorites-page">
+    <h2>Your Favorite Posts</h2>
+    <ul class="favorite-list">
+        {% for favorite in favorites %}
+        <li>
+            <a href="{% url 'post-detail' favorite.post.id %}">
+                {{ favorite.post.title }}
+            </a>
+        </li>
+        {% empty %}
+        <p>You haven't added any favorites yet.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
