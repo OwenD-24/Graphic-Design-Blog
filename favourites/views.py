@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .models import Favorite
+from .models import Favourite
 
 @login_required
-def favorites_list(request):
-    favorites = Favorite.objects.filter(user=request.user)
+def favourites_list(request):
+    favourites = Favourite.objects.filter(user=request.user)
     context = {
-        'favorites': favorites
+        'favourites': favourites
     }
-    return render(request, 'favorites/favorites_list.html', context)
+    return render(request, 'favourites/favourites_list.html', context)
 
