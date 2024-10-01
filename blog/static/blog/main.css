@@ -53,11 +53,11 @@ ul {
 
 /*--------------------------------Post Metadata (Date & Username) */
 .post-meta, .post-meta a {
-    color: #ffffff00;
+    color: #000000;
 }
 
 .post-meta a:hover {
-    color: #666666; 
+    color: #333333; 
 }
 
 /*--------------------------------Navbar Styling */
@@ -138,8 +138,8 @@ ul {
 }
 
 .post-box {
-    background-color: rgba(255, 255, 255, 0); 
-    color: #d3d3d300; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #000000; 
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,7 +164,8 @@ ul {
 
 /*--------------------------------Latest Projects Section */
 .latest-projects {
-    background-color: #d3d3d300; 
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #000000;
     padding: 20px; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
@@ -206,7 +207,7 @@ ul {
 
 /*--------------------------------Article Styling */
 .article-title {
-    color: #ffffff;
+    color: #000000;
     margin: 0 0 10px;
 }
 
@@ -260,15 +261,26 @@ a.article-title:hover {
 
 /*--------------------------------Article Metadata */
 .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    font-size: 13px;
+    padding-bottom: 2px; /* Adjust for spacing */
+    margin-bottom: 8px; /* Adjust for spacing */
+    font-size: 14px; /* Increase font size for clarity */
     border-bottom: 1px solid #e3e3e3;
+    color: #000000 /* Set the text color to white */
 }
 
-.article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
+.article-metadata a {
+    color: #000000; /* Change link color to white for better visibility */
+    font-weight: bold; /* Make the author's name bold */
+}
+
+.article-metadata .text-muted {
+    color: #000000; /* Change to a muted gray for visibility */
+    font-style: italic; /* Make the date italic */
+    margin-left: 5px; /* Space between the author's name and date */
+}
+
+.text-muted {
+    color: #000000 !important;
 }
 
 /*--------------------------------SVG Icon Styling */
@@ -280,21 +292,32 @@ a.article-title:hover {
 
 /*--------------------------------Account Section */
 .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-    transition: transform 0.3s;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid #03e9f4;
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
 }
 
-.account-heading {
-    font-size: 2.5rem;
-    transform: scale(1.05);
-    color: #000000;
+.profile-details {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .profile-details {
     color: #000000; 
+}
+
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------Authentication Links Styling */
@@ -323,15 +346,19 @@ a.article-title:hover {
 .profile-btn {
     font-family: 'Poppins', sans-serif;
     background: none;
-    color: #050801;
-    border: none;
-    padding: 8px;
+    color: #03e9f4;
+    border: 2px solid #03e9f4;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 5px;
 }
 
-.profile-btn:hover {
-    opacity: 0.7;
+  .profile-btn:hover {
+    background-color: #03e9f4;
+    color: #050801;
 }
 
 .profile-btn:focus {
@@ -365,31 +392,44 @@ a.article-title:hover {
 }
 
 /*--------------------------------Favourites App */
-.favorites-page {
+.favorites-section {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
     padding: 20px;
-    background-color: transparent;
 }
-
-.favorite-list {
+  
+  .favorites-section h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+  
+  .favorite-list {
     list-style-type: none;
     padding: 0;
 }
-
-.favorite-list li {
-    background-color: #ffffff00;
+  
+  .favorite-list li {
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
-
-.favorite-list a {
+  
+  .favorite-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+  
+  .favorite-list a {
+    color: #ffffff;
     text-decoration: none;
-    color: #333333;
 }
-
-.favorite-list a:hover {
-    color: #00f7ff;
+  
+  .favorite-list a:hover {
+    color: #03e9f4;
 }
 
 .btn {
@@ -431,7 +471,7 @@ button:focus {
 /*--------------------------------Footer Section */
 footer {
     background: linear-gradient(270deg, #d3d3d3, #002f4b);
-    color: white; 
+    color: rgb(0, 0, 0); 
     padding: 10px 0;
     text-align: center;
     flex-shrink: 0; 
