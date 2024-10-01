@@ -22,7 +22,7 @@
     {% if user.is_authenticated %}
     <form action="{% url 'favourite-post' object.id %}" method="POST">
       {% csrf_token %}
-      {% if object in user.favourites.all %}
+      {% if object in user.favourite_set.all %}
       <button type="submit" class="btn btn-warning">Remove from Favourites</button>
       {% else %}
       <button type="submit" class="btn btn-success">Add to Favourites</button>
