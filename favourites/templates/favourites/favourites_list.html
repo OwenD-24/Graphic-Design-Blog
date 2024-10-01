@@ -2,16 +2,16 @@
 
 {% block content %}
 <div class="favorites-page">
-    <h2>Your Favorite Posts</h2>
+    <h2>Your Favourite Posts</h2>
     <ul class="favorite-list">
-        {% for favorite in favorites %}
+        {% for favourite in favourites %}
         <li>
-            <a href="{% url 'blog-detail' favorite.post.id %}">
-                {{ favorite.post.title }}
+            <a href="{% url 'blog-detail' favourite.post.id %}">
+                {{ favourite.post.title }}
             </a>
         </li>
         {% empty %}
-        <p>You haven't added any favorites yet.</p>
+        <p>You haven't added any favourites yet.</p>
         {% endfor %}
     </ul>
 </div>
