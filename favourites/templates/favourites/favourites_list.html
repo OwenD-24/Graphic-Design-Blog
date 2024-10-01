@@ -9,6 +9,11 @@
             <a href="{% url 'blog-detail' favourite.post.id %}">
                 {{ favourite.post.title }}
             </a>
+            <!-- Form to toggle favourite status -->
+            <form action="{% url 'favourite-post' favourite.post.id %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning">Unfavourite</button>
+            </form>
         </li>
         {% empty %}
         <p>You haven't added any favourites yet.</p>
@@ -16,3 +21,4 @@
     </ul>
 </div>
 {% endblock %}
+
