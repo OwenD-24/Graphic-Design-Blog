@@ -12,7 +12,7 @@
             <!-- Form to toggle favourite status -->
             <form action="{% url 'favourite-post' favourite.post.id %}" method="POST" style="display:inline;">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-warning">Unfavourite</button>
+                <button type="submit" class="btn btn-danger">Unfavourite</button>
             </form>
         </li>
         {% empty %}
@@ -21,4 +21,3 @@
     </ul>
 </div>
 {% endblock %}
-

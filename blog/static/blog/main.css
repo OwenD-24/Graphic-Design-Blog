@@ -15,7 +15,7 @@
 html, body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #333333;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom right, #999999, #002f4b); 
@@ -44,7 +44,7 @@ main {
 
 /*--------------------------------Typography */
 h1, h2, h3, h4, h5, h6, p {
-    color: #222222;
+    color: #000000;
 }
 
 ul {
@@ -53,7 +53,7 @@ ul {
 
 /*--------------------------------Post Metadata (Date & Username) */
 .post-meta, .post-meta a {
-    color: #444444;
+    color: #ffffff00;
 }
 
 .post-meta a:hover {
@@ -138,8 +138,8 @@ ul {
 }
 
 .post-box {
-    background-color: white; 
-    color: #222222; 
+    background-color: rgba(255, 255, 255, 0); 
+    color: #d3d3d300; 
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,7 +164,7 @@ ul {
 
 /*--------------------------------Latest Projects Section */
 .latest-projects {
-    background-color: #d3d3d3; 
+    background-color: #d3d3d300; 
     padding: 20px; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
@@ -206,12 +206,12 @@ ul {
 
 /*--------------------------------Article Styling */
 .article-title {
-    color: #444444;
+    color: #ffffff;
     margin: 0 0 10px;
 }
 
 a.article-title:hover {
-    color: #9900ff;
+    color: #03e9f4;
     text-decoration: none;
 }
 
@@ -226,13 +226,36 @@ a.article-title:hover {
     margin: 15px 0;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(81, 223, 255, 0.1);
 }
 
 .article-img {
     height: 65px;
     width: 65px;
     margin-right: 16px;
+}
+
+/*--------------------------------Post Button Styling */
+.post-btn {
+    background-color: transparent;
+    border: 2px solid #03e9f4;
+    color: #03e9f4;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.post-btn:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    border-color: #03e9f4;
+}
+
+.post-btn:focus {
+    outline: none;
 }
 
 /*--------------------------------Article Metadata */
@@ -267,11 +290,11 @@ a.article-title:hover {
 .account-heading {
     font-size: 2.5rem;
     transform: scale(1.05);
-    color: #222222;
+    color: #000000;
 }
 
 .profile-details {
-    color: #333333; 
+    color: #000000; 
 }
 
 /*--------------------------------Authentication Links Styling */
@@ -344,7 +367,7 @@ a.article-title:hover {
 /*--------------------------------Favourites App */
 .favorites-page {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: transparent;
 }
 
 .favorite-list {
@@ -353,7 +376,7 @@ a.article-title:hover {
 }
 
 .favorite-list li {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -369,14 +392,35 @@ a.article-title:hover {
     color: #00f7ff;
 }
 
-.btn-success:hover {
-    background-color: #03e9f4;
-    border-color: #03e9f4;
+.btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid transparent; 
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn-warning:hover {
-    background-color: #ffcc00;
-    border-color: #ffcc00;
+.btn-success {
+    background: none;
+    color: rgb(0, 255, 0); 
+    border-color: rgb(0, 255, 0); 
+}
+
+.btn-success:hover {
+    background-color: rgb(0, 255, 0); 
+    color: black; 
+}
+
+.btn-danger {
+    background: none;
+    color: red; 
+    border-color: red; 
+}
+
+.btn-danger:hover {
+    background-color: red; 
+    color: black;
 }
 
 button:focus {
