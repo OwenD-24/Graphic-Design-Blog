@@ -341,6 +341,49 @@ button:focus {
     text-align: center;
 }
 
+/*--------------------------------Favourites App */
+.favorites-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.favorite-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorite-list li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-list a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.favorite-list a:hover {
+    color: #00f7ff;
+}
+
+button {
+    background-color: #00f7ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #03e9f4;
+}
+
+
 /*--------------------------------Footer Section */
 footer {
     background: linear-gradient(270deg, #d3d3d3, #002f4b);

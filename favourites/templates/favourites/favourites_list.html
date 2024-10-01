@@ -6,7 +6,7 @@
     <ul class="favorite-list">
         {% for favorite in favorites %}
         <li>
-            <a href="{% url 'post-detail' favorite.post.id %}">
+            <a href="{% url 'blog-detail' favorite.post.id %}">
                 {{ favorite.post.title }}
             </a>
         </li>
