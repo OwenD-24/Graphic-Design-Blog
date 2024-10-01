@@ -297,7 +297,7 @@ a.article-title:hover {
 }
 
 /*--------------------------------Button Styling */
-button {
+.profile-btn {
     font-family: 'Poppins', sans-serif;
     background: none;
     color: #050801;
@@ -307,12 +307,12 @@ button {
     font-size: 18px;
 }
 
-button:hover {
+.profile-btn:hover {
     opacity: 0.7;
 }
 
-button:focus {
-    outline: none;
+.profile-btn:focus {
+    outline: none; 
 }
 
 /*--------------------------------Card Styling */
@@ -369,18 +369,18 @@ button:focus {
     color: #00f7ff;
 }
 
-button {
-    background-color: #00f7ff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.btn-success:hover {
+    background-color: #03e9f4;
+    border-color: #03e9f4;
 }
 
-button:hover {
-    background-color: #03e9f4;
+.btn-warning:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+button:focus {
+    outline: none; 
 }
 
 
