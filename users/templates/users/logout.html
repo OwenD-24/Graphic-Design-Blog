@@ -1,17 +1,16 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
 
-
 {% block content %}
     <div class="content-section">
         <form action="" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Hello</legend>
+                <legend class="border-bottom mb-4">Goodbye!</legend>
                 <h4>You just logged out</h4>
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit"><a href="{% url 'login' %}">Login Again</a></button>
+                <a href="{% url 'login' %}" class="loginagain-btn">Login Again</a>
             </div>
         </form>
     </div>

@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="cardd">
-    <div class="m-b-25"> <img class="rounded-square account-img" id="profile-img" src="{{ user.profile.image.url }}"
-            class="img-radius" alt="User-Profile-Image"> </div>
+    <div class="m-b-25"> <img class="rounded-square account-img img-radius" id="profile-img"
+            src="{{ user.profile.image.url }}" alt="User-Profile-Image">
+    </div>
 
     <h1 id="profile-h1">{{user.username|title}}</h1>
     <p class="title">{{user.email}}</p>
@@ -25,12 +26,6 @@
         </fieldset>
     </form>
 
-    <p><button class="profile-btn"><a href="{% url 'profile-update' user.username %}" id="auth-links">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Update Profile
-            </a></button></p>
+    <p><a href="{% url 'profile-update' user.username %}" class="profile-btn">Update Profile</a></p>
 </div>
 {% endblock content %}

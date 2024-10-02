@@ -4,13 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /*--------------------------------General Page Styling */
 html, body {
     margin: 0;
@@ -19,7 +12,6 @@ html, body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom right, #999999, #002f4b); 
-    background-size: cover;
     min-height: 100vh;
 }
 
@@ -133,8 +125,7 @@ ul {
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
-    width: 100%; /* Use full width */
-    padding-bottom: 20px;
+    width: 100%;
 }
 
 .post-box {
@@ -144,11 +135,7 @@ ul {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    text-align: center; 
-    margin: 10px 0; 
+
 }
 
 .post-box:hover {
@@ -239,10 +226,10 @@ a.article-title:hover {
 /*--------------------------------Post Button Styling */
 .post-btn {
     background-color: transparent;
-    border: 2px solid #03e9f4;
+    border: none;
     color: #03e9f4;
     font-family: 'Poppins', sans-serif;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     font-size: 18px;
@@ -252,7 +239,6 @@ a.article-title:hover {
 .post-btn:hover {
     background-color: #03e9f4;
     color: #050801;
-    border-color: #03e9f4;
 }
 
 .post-btn:focus {
@@ -261,22 +247,22 @@ a.article-title:hover {
 
 /*--------------------------------Article Metadata */
 .article-metadata {
-    padding-bottom: 2px; /* Adjust for spacing */
-    margin-bottom: 8px; /* Adjust for spacing */
-    font-size: 14px; /* Increase font size for clarity */
+    padding-bottom: 2px; 
+    margin-bottom: 8px; 
+    font-size: 14px; 
     border-bottom: 1px solid #e3e3e3;
-    color: #000000 /* Set the text color to white */
+    color: #000000 
 }
 
 .article-metadata a {
-    color: #000000; /* Change link color to white for better visibility */
-    font-weight: bold; /* Make the author's name bold */
+    color: #000000; 
+    font-weight: bold; 
 }
 
 .article-metadata .text-muted {
-    color: #000000; /* Change to a muted gray for visibility */
-    font-style: italic; /* Make the date italic */
-    margin-left: 5px; /* Space between the author's name and date */
+    color: #000000; 
+    font-style: italic; 
+    margin-left: 5px; 
 }
 
 .text-muted {
@@ -320,6 +306,11 @@ a.article-title:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.form-group {
+    max-width: 500px;
+    margin: auto;
+}
+
 /*--------------------------------Authentication Links Styling */
 #auth-links {
     position: relative;
@@ -332,14 +323,20 @@ a.article-title:hover {
     margin-right: 5px;
     transition: transform 0.3s, color 0.3s;
     font-size: 1.5rem;
+    text-decoration: none;
 }
 
 #auth-links:hover {
     font-weight: bold;
     background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-    transform: scale(1.1);
+    color: #000000;
+    box-shadow: 0 0 15px #03e9f4, 0 0 40px #03e9f4;
+    transform: scale(1.05); 
+    text-decoration: none;
+}
+
+#profile-h1, .title, #auth-links {
+    font-family: 'Poppins', sans-serif;
 }
 
 /*--------------------------------Button Styling */
@@ -347,32 +344,107 @@ a.article-title:hover {
     font-family: 'Poppins', sans-serif;
     background: none;
     color: #03e9f4;
-    border: 2px solid #03e9f4;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
     transition: all 0.3s ease;
     margin: 5px;
+    outline: none;
+    text-decoration: none;
 }
 
-  .profile-btn:hover {
+.profile-btn:hover {
     background-color: #03e9f4;
-    color: #050801;
+    color: #000000;
+    text-decoration: none;
 }
 
 .profile-btn:focus {
     outline: none; 
 }
 
+.btn-update {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 5px;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-update:hover {
+    background-color: #03e9f4;
+    color: #000000;
+    text-decoration: none;
+}
+
+.btn-update:focus {
+    outline: none; 
+}
+
+.loginagain-btn {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 5px;
+    outline: none;
+    text-decoration: none;
+}
+
+.loginagain-btn:hover {
+    background-color: #03e9f4;
+    color: #000000;
+    text-decoration: none;
+}
+
+.loginagain-btn:focus {
+    outline: none; 
+}
+
+.login-btn {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 5px;
+    outline: none;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #03e9f4;
+    color: #000000;
+    text-decoration: none;
+}
+
+.login-btn:focus {
+    outline: none; 
+}
+
 /*--------------------------------Card Styling */
 .cardd {
     max-width: 700px;
-    margin: auto;
-    text-align: center;
-    border-radius: 20px;
-    background: transparent;
-
+    margin: 30px auto; 
+    padding: 20px; 
 }
 
 /*--------------------------------Profile Image */
@@ -387,7 +459,7 @@ a.article-title:hover {
     font-size: 2rem; 
     font-weight: 600; 
     margin-top: 5px; 
-    color: #222; 
+    color: #000000; 
     text-align: center;
 }
 
@@ -444,7 +516,6 @@ a.article-title:hover {
 .btn-success {
     background: none;
     color: rgb(0, 255, 0); 
-    border-color: rgb(0, 255, 0); 
 }
 
 .btn-success:hover {
@@ -455,7 +526,6 @@ a.article-title:hover {
 .btn-danger {
     background: none;
     color: red; 
-    border-color: red; 
 }
 
 .btn-danger:hover {
