@@ -1,10 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import redirect, render
-from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
-
 
 from .forms import ProfileUpdateForm, UserRegisterForm, UserUpdateForm
 
@@ -28,28 +26,31 @@ def register(request):
 @login_required
 def profile(request, username):
     user = get_object_or_404(User, username=username)
-    return render(request, 'users/profile.html')
+    return render(request, 'users/profile.html', {'user': user})
+
 
 @login_required
-def profile_update(request):
+def profile_update(request, username):  
+    user = get_object_or_404(User, username=username)
+
     if request.method == 'POST':
-        u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        u_form = UserUpdateForm(request.POST, instance=user)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=user.profile)
 
         if u_form.is_valid() and p_form.is_valid():
             try:
                 u_form.save()
                 p_form.save()  
                 messages.success(request, 'Your account has been updated!')
-                return redirect('profile')
+                return redirect('user-profile', username=user.username)  
             except Exception as e:
                 messages.error(request, f'Error saving profile: {str(e)}')
         else:
             messages.error(request, 'There were errors in the form.')
 
     else:
-        u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
+        u_form = UserUpdateForm(instance=user)
+        p_form = ProfileUpdateForm(instance=user.profile)
 
     context = {
         "u_form": u_form,
