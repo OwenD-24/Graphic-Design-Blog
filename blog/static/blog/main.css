@@ -480,17 +480,25 @@ footer {
     margin-top: auto;
 }
 
-footer a {
-    color: #ffffff; 
-    text-decoration: none; 
-    margin: 0 10px; 
+.footer-links {
+    display: flex;
+    justify-content: center; 
+    margin-top: 5px;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: #03e9f4;
+.footer-links a {
+    color: #ffffff; 
+    text-decoration: none; 
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: #03e9f4; 
 }
 
 .footer .text-muted {
-    color: black !important; 
+    display: block;
+    color: black !important;
+    margin-bottom: 10px;
 }

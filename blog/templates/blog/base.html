@@ -96,9 +96,12 @@
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">&copy; 2024 Designers Blog Page. All rights reserved.</span>
+        <span class="text-muted">&copy; 2024 Designers Blog Page. All rights reserved.</span>
+        <div class="footer-links">
             <a class="nav-item nav-link" href="{% url 'blog-home' %}">HOME</a>
+            <a class="nav-item nav-link" href="{% url 'blog-about' %}">ABOUT</a>
+            <a class="nav-item nav-link" href="{% url 'favourites-list' %}">FAVOURITES</a>
+            <a class="nav-item nav-link" href="{% url 'users-profile' %}">PROFILE</a>
         </div>
     </footer>
 
