@@ -221,6 +221,7 @@ a.article-title:hover {
     height: 65px;
     width: 65px;
     margin-right: 16px;
+    object-fit: cover;
 }
 
 /*--------------------------------Post Button Styling */
@@ -578,4 +579,31 @@ footer {
     display: block;
     color: black !important;
     margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social-icon {
+    margin-left: 100px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+.social-icon:hover {
+    color: #03e9f4;
+}
+  
+.fab {
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.fab:hover {
+    color: #03e9f4;
 }

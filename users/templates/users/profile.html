@@ -7,19 +7,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="cardd">
-    <div class="m-b-25"> 
+    <div class="m-b-25">
         <img class="rounded-square account-img img-radius" id="profile-img"
-            src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}https://res.cloudinary.com/dszytls9j/image/upload/v1727959704/default_lahajp.webp{% endif %}" 
+            src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}https://res.cloudinary.com/dszytls9j/image/upload/v1727959704/default_lahajp.webp{% endif %}"
             alt="User-Profile-Image">
     </div>
 
     <h1 id="profile-h1">{{ user.username|title }}</h1>
     <p class="title">{{ user.email }}</p>
     <p>Social Links Below</p>
-    <a href="#" id="auth-links"><i class="fa fa-dribbble"></i></a>
-    <a href="#" id="auth-links"><i class="fa fa-twitter"></i></a>
-    <a href="#" id="auth-links"><i class="fa fa-linkedin"></i></a>
-    <a href="#" id="auth-links"><i class="fa fa-facebook"></i></a>
+    <div class="social-icons">
+        {% if user.profile.facebook %}
+        <a href="{{ user.profile.github }}" target="_blank" id="auth-links">
+            <i class="fa fa-github"></i>
+        </a>
+        {% endif %}
+        {% if user.profile.twitter %}
+        <a href="{{ user.profile.twitter }}" target="_blank" id="auth-links">
+            <i class="fa fa-twitter"></i>
+        </a>
+        {% endif %}
+        {% if user.profile.instagram %}
+        <a href="{{ user.profile.linkedin }}" target="_blank" id="auth-links">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        {% endif %}
+    </div>
+
 
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
