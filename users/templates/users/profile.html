@@ -1,17 +1,20 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="cardd">
-    <div class="m-b-25"> <img class="rounded-square account-img img-radius" id="profile-img"
-            src="{{ user.profile.image.url }}" alt="User-Profile-Image">
+    <div class="m-b-25"> 
+        <img class="rounded-square account-img img-radius" id="profile-img"
+            src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'blog/images/default.webp' %}{% endif %}" 
+            alt="User-Profile-Image">
     </div>
 
-    <h1 id="profile-h1">{{user.username|title}}</h1>
-    <p class="title">{{user.email}}</p>
+    <h1 id="profile-h1">{{ user.username|title }}</h1>
+    <p class="title">{{ user.email }}</p>
     <p>Social Links Below</p>
     <a href="#" id="auth-links"><i class="fa fa-dribbble"></i></a>
     <a href="#" id="auth-links"><i class="fa fa-twitter"></i></a>
