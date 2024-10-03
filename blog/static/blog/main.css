@@ -454,6 +454,13 @@ a.article-title:hover {
     height: 150px;
 }
 
+.account-img {
+    width: 100px; 
+    height: auto; 
+    object-fit: cover;
+}
+
+
 /*--------------------------------Profile Heading */
 #profile-h1 {
     font-size: 2rem; 

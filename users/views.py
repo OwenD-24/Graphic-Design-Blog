@@ -1,15 +1,16 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
 from .forms import ProfileUpdateForm, UserRegisterForm, UserUpdateForm
+from .models import Profile
 
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()  
+            Profile.objects.create(user=user)  
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account successfully created for {username}. You can log in now!')
             return redirect('login')
@@ -52,4 +53,5 @@ def profile_update(request, username):
         "p_form": p_form
     }
     return render(request, 'users/profile_update.html', context)
+
 
