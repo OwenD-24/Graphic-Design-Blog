@@ -6,6 +6,9 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
 from .forms import ProfileUpdateForm, UserRegisterForm, UserUpdateForm
 from .models import Profile
+import logging
+
+logger = logging.getLogger(__name__)
 
 def register(request):
     if request.method == "POST":
@@ -23,7 +26,7 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
-@login_required
+@login_required(login_url='login')
 def profile(request, username):
     user = get_object_or_404(User, username=username)
     return render(request, 'users/profile.html', {'user': user})
@@ -56,11 +59,9 @@ def profile_update(request, username):
     }
     return render(request, 'users/profile_update.html', context)
 
-from django.contrib.auth.decorators import login_required
-
 def user_login(request):
     if request.user.is_authenticated:  
-        return redirect('blog-home')  
+        return redirect('blog-home')  # Redirect authenticated users to the home page
 
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -71,7 +72,7 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, f'Welcome back, {username}!')
-                return redirect('blog-home')
+                return redirect('blog-home')  # Redirect to the home page
             else:
                 messages.error(request, 'Invalid username or password.')
         else:
@@ -80,6 +81,7 @@ def user_login(request):
         form = AuthenticationForm()
 
     return render(request, 'users/login.html', {'form': form})
+
 
 
 
