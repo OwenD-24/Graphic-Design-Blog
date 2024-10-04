@@ -31,8 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-owend24-graphicdesignbl-skobig2nw4l.ws.codeinstitute-ide.net',
-    'graphics-blog-0f37e68d5715.herokuapp.com/',
-    'https://graphics-blog-0f37e68d5715.herokuapp.com/',
+    'graphics-blog-0f37e68d5715.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
