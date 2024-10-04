@@ -2,16 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="content-section">
-        <form action="" method="post">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Goodbye!</legend>
-                <h4>You just logged out</h4>
-            </fieldset>
-            <div class="form-group">
-                <a href="{% url 'login' %}" class="loginagain-btn">Login Again</a>
-            </div>
-        </form>
+<div class="content-section">
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Goodbye!</legend>
+        <h4>You just logged out</h4>
+    </fieldset>
+    <div class="form-group">
+        <a href="{% url 'login' %}" class="loginagain-btn">Login Again</a>
     </div>
+</div>
 {% endblock content %}

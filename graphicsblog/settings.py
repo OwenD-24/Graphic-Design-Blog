@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'cloudinary',
 ]
 
+# Session engine setting
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',

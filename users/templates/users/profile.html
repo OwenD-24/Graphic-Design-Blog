@@ -17,7 +17,7 @@
     <p class="title">{{ user.email }}</p>
     <p>Social Links Below</p>
     <div class="social-icons">
-        {% if user.profile.facebook %}
+        {% if user.profile.github %}
         <a href="{{ user.profile.github }}" target="_blank" id="auth-links">
             <i class="fa fa-github"></i>
         </a>
@@ -27,13 +27,12 @@
             <i class="fa fa-twitter"></i>
         </a>
         {% endif %}
-        {% if user.profile.instagram %}
+        {% if user.profile.linkedin %}
         <a href="{{ user.profile.linkedin }}" target="_blank" id="auth-links">
             <i class="fa fa-linkedin"></i>
         </a>
         {% endif %}
     </div>
-
 
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
