@@ -13,12 +13,22 @@ html, body {
     flex-direction: column;
     background: linear-gradient(to bottom right, #999999, #002f4b); 
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-main {
-    flex-grow: 1;
-    display: flex;  
-    flex-direction: column; 
+.toast {
+    top: 20px;
+    right: 20px;
+    z-index: 1060;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.mb-4 { 
+    margin-bottom: 0.2rem !important;
+    text-align: center;
 }
 
 .home-page main, .about-container, .content-section {
@@ -92,10 +102,14 @@ ul {
     .site-header .navbar-brand img {
         max-width: 150px; 
         height: auto;
+        margin-top: -30px;
+        margin-right: 70px;
     }
 
     .site-header .navbar-toggler {
         background-color: #03e9f4; 
+        margin-top: 8px;
+        margin-right: 30px;
     }
 
     .navbar-collapse {
@@ -109,6 +123,21 @@ ul {
 
     .navbar-collapse .nav-link:hover {
         color: #03e9f4; 
+    }
+
+    .content-section {
+        flex-direction: column; 
+    }
+
+    .latest-projects {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .posts-grid {
+        margin-left: 0; 
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -151,11 +180,6 @@ ul {
 
 /*--------------------------------Latest Projects Section */
 .latest-projects {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #000000;
-    padding: 20px; 
-    border-radius: 5px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     width: 94.5%; 
     margin: 10px auto; 
     text-align: left; 
@@ -166,21 +190,19 @@ ul {
     margin-top: 20px;
 }
 
-/*--------------------------------Responsive adjustments */
-@media (max-width: 768px) {
-    .content-section {
-        flex-direction: column; 
-    }
+.list-group-item-action {
+    width: 100%;
+    color: #035c8f;
+    text-align: inherit;
+}
 
-    .latest-projects {
-        width: 100%; 
-        margin-left: 0; 
-        margin-top: 20px; 
-    }
+a {
+    color: #000000;
+    font-weight: bold;
+}
 
-    .posts-grid {
-        margin-left: 0; 
-    }
+a:hover {
+    color: #000000;
 }
 
 /*--------------------------------About Page Styling */
@@ -221,6 +243,7 @@ a.article-title:hover {
     height: 65px;
     width: 65px;
     margin-right: 16px;
+    object-fit: cover;
 }
 
 /*--------------------------------Post Button Styling */
@@ -350,9 +373,6 @@ a.article-title:hover {
     font-size: 16px;
     border-radius: 5px;
     transition: all 0.3s ease;
-    margin: 5px;
-    outline: none;
-    text-decoration: none;
 }
 
 .profile-btn:hover {
@@ -453,6 +473,13 @@ a.article-title:hover {
     width: 150px;
     height: 150px;
 }
+
+.account-img {
+    width: 100px; 
+    height: auto; 
+    object-fit: cover;
+}
+
 
 /*--------------------------------Profile Heading */
 #profile-h1 {
@@ -571,4 +598,75 @@ footer {
     display: block;
     color: black !important;
     margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social-icon {
+    margin-left: 100px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+.social-icon:hover {
+    color: #03e9f4;
+}
+  
+.fab {
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.fab:hover {
+    color: #03e9f4;
+}
+
+/*--------------------------------Post Box Responsive Styling */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-box {
+        margin: 0 0 20px; 
+    }
+}
+
+/*--------------------------------Max Width for Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/*--------------------------------Alert Styling */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }

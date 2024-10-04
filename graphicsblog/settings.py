@@ -132,9 +132,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
-# Security Settings for Production
-if not DEBUG:
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    X_FRAME_OPTIONS = 'DENY'
