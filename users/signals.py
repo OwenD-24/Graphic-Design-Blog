@@ -14,16 +14,15 @@ def create_profile(sender, instance, created, **kwargs):
     if created:
         try:
             Profile.objects.create(user=instance)
-            logger.info(f'Profile created for user: {instance.username}')
+            logger.info(f"Profile created for user: {instance.username}")
         except Exception as e:
-            logger.error(f'Error creating profile for user {instance.username}: {e}')
-
+            logger.error(f"Error creating profile for user {instance.username}: {e}")
 
 
 @receiver(post_save, sender=User)
 def save_profile(sender, instance, **kwargs):
     try:
         instance.profile.save()
-        logger.info(f'Profile updated for user: {instance.username}')
+        logger.info(f"Profile updated for user: {instance.username}")
     except Exception as e:
-        logger.error(f'Error saving profile for user {instance.username}: {e}')
+        logger.error(f"Error saving profile for user {instance.username}: {e}")

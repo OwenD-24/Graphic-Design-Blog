@@ -10,31 +10,37 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()    
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account successfully created for {username}. You can log in now!')
-            return redirect('login')
+            user = form.save()
+            username = form.cleaned_data.get("username")
+            messages.success(
+                request,
+                f"Account successfully created for {username}. You can log in now!",
+            )
+            return redirect("login")
         else:
             for error in form.errors.values():
                 messages.error(request, error)
     else:
         form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, "users/register.html", {"form": form})
 
-@login_required(login_url='login')
+
+@login_required(login_url="login")
 def profile(request, username):
     user = get_object_or_404(User, username=username)
-    return render(request, 'users/profile.html', {'user': user})
+    return render(request, "users/profile.html", {"user": user})
+
 
 @login_required
 def profile_update(request, username):
     user = get_object_or_404(User, username=username)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         u_form = UserUpdateForm(request.POST, instance=user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=user.profile)
 
@@ -42,46 +48,39 @@ def profile_update(request, username):
             try:
                 u_form.save()
                 p_form.save()
-                messages.success(request, 'Your account has been updated!')
-                return redirect('user-profile', username=user.username)
+                messages.success(request, "Your account has been updated!")
+                return redirect("user-profile", username=user.username)
             except Exception as e:
-                messages.error(request, f'Error saving profile: {str(e)}')
+                messages.error(request, f"Error saving profile: {str(e)}")
         else:
-            messages.error(request, 'There were errors in the form.')
+            messages.error(request, "There were errors in the form.")
     else:
         u_form = UserUpdateForm(instance=user)
         p_form = ProfileUpdateForm(instance=user.profile)
 
-    context = {
-        "u_form": u_form,
-        "p_form": p_form
-    }
-    return render(request, 'users/profile_update.html', context)
+    context = {"u_form": u_form, "p_form": p_form}
+    return render(request, "users/profile_update.html", context)
+
 
 def user_login(request):
-    if request.user.is_authenticated:  
-        return redirect('blog-home')  # Redirect authenticated users to the home page
+    if request.user.is_authenticated:
+        return redirect("blog-home")  # Redirect authenticated users to the home page
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request, f'Welcome back, {username}!')
-                return redirect('blog-home')  # Redirect to the home page
+                messages.success(request, f"Welcome back, {username}!")
+                return redirect("blog-home")  # Redirect to the home page
             else:
-                messages.error(request, 'Invalid username or password.')
+                messages.error(request, "Invalid username or password.")
         else:
-            messages.error(request, 'Invalid username or password.')
+            messages.error(request, "Invalid username or password.")
     else:
         form = AuthenticationForm()
 
-    return render(request, 'users/login.html', {'form': form})
-
-
-
-
-
+    return render(request, "users/login.html", {"form": form})

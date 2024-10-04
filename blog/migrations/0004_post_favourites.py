@@ -8,14 +8,18 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('favourites', '0002_rename_favorite_favourite'),
-        ('blog', '0003_remove_post_excerpt'),
+        ("favourites", "0002_rename_favorite_favourite"),
+        ("blog", "0003_remove_post_excerpt"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='post',
-            name='favourites',
-            field=models.ManyToManyField(related_name='favourites', through='favourites.Favourite', to=settings.AUTH_USER_MODEL),
+            model_name="post",
+            name="favourites",
+            field=models.ManyToManyField(
+                related_name="favourites",
+                through="favourites.Favourite",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0003_alter_profile_image'),
+        ("users", "0003_alter_profile_image"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='github',
+            model_name="profile",
+            name="github",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='linkedin',
+            model_name="profile",
+            name="linkedin",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='twitter',
+            model_name="profile",
+            name="twitter",
             field=models.URLField(blank=True, null=True),
         ),
     ]

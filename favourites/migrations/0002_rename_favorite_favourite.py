@@ -8,13 +8,13 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('blog', '0003_remove_post_excerpt'),
-        ('favourites', '0001_initial'),
+        ("blog", "0003_remove_post_excerpt"),
+        ("favourites", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='Favorite',
-            new_name='Favourite',
+            old_name="Favorite",
+            new_name="Favourite",
         ),
     ]
