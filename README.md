@@ -12,7 +12,26 @@ Features
 - CRUD for Blog Posts: Users can create, edit, delete, and manage their posts.
 
 User Stories
-![User Stories](https://github.com/user-attachments/assets/12ba0869-863f-4436-bfd3-7e17ae6a8a79)
+- ![image](https://github.com/user-attachments/assets/a1b61106-569a-4278-a9af-8d22bd0ad59b)
+- ![image](https://github.com/user-attachments/assets/b93cb7e3-0ede-4919-9900-f519c669823a)
+- ![image](https://github.com/user-attachments/assets/72095ec6-41a0-451e-81fb-e61065b95327)
+- ![image](https://github.com/user-attachments/assets/f402b72f-b4f2-4f7b-9706-275501a95831)
+- ![image](https://github.com/user-attachments/assets/99fc1a92-3dfc-4b54-a372-5956fce324d2)
+- ![image](https://github.com/user-attachments/assets/211a32ed-e65a-4287-a0ff-d3449039d0b9)
+- ![image](https://github.com/user-attachments/assets/a981b974-63d7-4181-bcc6-a6f950db9782)
+- ![image](https://github.com/user-attachments/assets/b74a99c4-2a30-40ce-94d9-ee94bd23764d)
+- ![image](https://github.com/user-attachments/assets/3d9d2a5c-c8b2-444a-85bf-5996f53978ac)
+- 
+
+
+
+
+
+
+
+
+
+
 
 Technologies Used
 - Backend: Django, Python
