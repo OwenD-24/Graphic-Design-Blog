@@ -13,6 +13,7 @@ html, body {
     flex-direction: column;
     background: linear-gradient(to bottom right, #999999, #002f4b); 
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
@@ -92,10 +93,14 @@ ul {
     .site-header .navbar-brand img {
         max-width: 150px; 
         height: auto;
+        margin-top: -30px;
+        margin-right: 70px;
     }
 
     .site-header .navbar-toggler {
         background-color: #03e9f4; 
+        margin-top: 8px;
+        margin-right: 30px;
     }
 
     .navbar-collapse {
@@ -109,6 +114,21 @@ ul {
 
     .navbar-collapse .nav-link:hover {
         color: #03e9f4; 
+    }
+
+    .content-section {
+        flex-direction: column; 
+    }
+
+    .latest-projects {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .posts-grid {
+        margin-left: 0; 
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -164,23 +184,6 @@ ul {
 
 .latest-projects-container {
     margin-top: 20px;
-}
-
-/*--------------------------------Responsive adjustments */
-@media (max-width: 768px) {
-    .content-section {
-        flex-direction: column; 
-    }
-
-    .latest-projects {
-        width: 100%; 
-        margin-left: 0; 
-        margin-top: 20px; 
-    }
-
-    .posts-grid {
-        margin-left: 0; 
-    }
 }
 
 /*--------------------------------About Page Styling */
@@ -351,9 +354,6 @@ a.article-title:hover {
     font-size: 16px;
     border-radius: 5px;
     transition: all 0.3s ease;
-    margin: 5px;
-    outline: none;
-    text-decoration: none;
 }
 
 .profile-btn:hover {
@@ -606,4 +606,28 @@ footer {
 
 .fab:hover {
     color: #03e9f4;
+}
+
+/*--------------------------------Post Box Responsive Styling */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-box {
+        margin: 0 0 20px; 
+    }
+}
+
+/*--------------------------------Max Width for Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 5px;
+    }
 }
