@@ -4,6 +4,7 @@
 <div class="favorites-page">
     <h2>Your Favourite Posts</h2>
     <ul class="favorite-list">
+        {% if favourites %}
         {% for favourite in favourites %}
         <li>
             <a href="{% url 'blog-detail' favourite.post.id %}">
@@ -15,9 +16,10 @@
                 <button type="submit" class="btn btn-danger">Unfavourite</button>
             </form>
         </li>
-        {% empty %}
-        <p>You haven't added any favourites yet.</p>
         {% endfor %}
+        {% else %}
+        <li>You haven't added any favourites yet.</li>
+        {% endif %}
     </ul>
 </div>
 {% endblock %}

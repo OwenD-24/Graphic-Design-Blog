@@ -56,7 +56,12 @@ def profile_update(request, username):
     }
     return render(request, 'users/profile_update.html', context)
 
+from django.contrib.auth.decorators import login_required
+
 def user_login(request):
+    if request.user.is_authenticated:  
+        return redirect('blog-home')  
+
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
@@ -67,7 +72,6 @@ def user_login(request):
                 login(request, user)
                 messages.success(request, f'Welcome back, {username}!')
                 return redirect('blog-home')
-
             else:
                 messages.error(request, 'Invalid username or password.')
         else:
@@ -76,6 +80,7 @@ def user_login(request):
         form = AuthenticationForm()
 
     return render(request, 'users/login.html', {'form': form})
+
 
 
 

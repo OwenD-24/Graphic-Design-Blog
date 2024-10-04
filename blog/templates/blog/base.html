@@ -77,47 +77,45 @@
         </nav>
     </header>
 
-    <main role="main" class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="posts-wrapper">
-                    {% block content %}{% endblock %}
-                </div>
+    <div class="row main container mt-5 pt-5">
+        <div class="col-md-8">
+            <div class="posts-wrapper">
+                {% block content %}{% endblock %}
             </div>
-            <div class="col-md-4">
-                <div class="content-container">
-                    <div id="list-group"
-                        class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                        <span class="fs-5 fw-semibold" id="gist-btn">Latest Projects</span>
+        </div>
+        <div class="col-md-4">
+            <div class="content-container">
+                <div id="list-group"
+                    class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                    <span class="fs-5 fw-semibold" id="gist-btn">Latest Projects</span>
+                </div>
+                <div class="latest-projects list-group list-group-flush border-bottom scrollarea">
+                    <!-- Latest projects section -->
+                    <div class="list-group-item list-group-item-action lh-tight">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">Teaching the Basics of Design... by User</strong>
+                            <small>Wed</small>
+                        </div>
+                        <div class="col-10 mb-1 small">Design Principles... by User</div>
                     </div>
-                    <div class="latest-projects list-group list-group-flush border-bottom scrollarea">
-                        <!-- Latest projects section -->
-                        <div class="list-group-item list-group-item-action lh-tight">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">Teaching the Basics of Design... by User</strong>
-                                <small>Wed</small>
-                            </div>
-                            <div class="col-10 mb-1 small">Design Principles... by User</div>
+                    <div class="list-group-item list-group-item-action py-3 lh-tight">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">Practice Makes Perfect... by User</strong>
+                            <small>Tues</small>
                         </div>
-                        <div class="list-group-item list-group-item-action py-3 lh-tight">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">Practice Makes Perfect... by User</strong>
-                                <small>Tues</small>
-                            </div>
-                            <div class="col-10 mb-1 small">Graphics Design in Coding... by User</div>
+                        <div class="col-10 mb-1 small">Graphics Design in Coding... by User</div>
+                    </div>
+                    <div class="list-group-item list-group-item-action py-3 lh-tight">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">I wanted to be a good designer but... by User</strong>
+                            <small>Mon</small>
                         </div>
-                        <div class="list-group-item list-group-item-action py-3 lh-tight">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <strong class="mb-1">I wanted to be a good designer but... by User</strong>
-                                <small>Mon</small>
-                            </div>
-                            <div class="col-10 mb-1 small">...</div>
-                        </div>
+                        <div class="col-10 mb-1 small">...</div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer class="footer-content">
         <span class="text-muted">&copy; 2024 Designers Blog Page. All rights reserved.</span>

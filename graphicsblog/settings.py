@@ -27,7 +27,7 @@ if os.path.isfile("env.py"):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-owend24-graphicdesignbl-skobig2nw4l.ws.codeinstitute-ide.net',
