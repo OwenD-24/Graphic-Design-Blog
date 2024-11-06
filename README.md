@@ -86,7 +86,7 @@
   - Fix: Updated the action URL in the form from post-delete to blog-delete, aligning with the URL name in urls.py.
   - Testing:
     - Verified that posts are now deletable without errors and redirect correctly, even in production.
-  ![image](https://github.com/user-attachments/assets/4d1396f4-c96f-48e0-8e74-beaa18f042fd)
+  ![image](https://github.com/user-attachments/assets/52458f93-3b49-44d1-83a7-beded9f470b4)
 - User Authentication Checks
   - Checked that only authenticated users could create, update, or delete posts, enforcing security and access control.
   ![image](https://github.com/user-attachments/assets/8c6c8454-657c-489e-ae23-a0a6e0d149e2)
