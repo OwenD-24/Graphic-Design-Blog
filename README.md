@@ -8,7 +8,7 @@
 - <a href="#installation-and-setup">Installation and Setup</a>
 - <a href="#usage">Usage</a>
 - <a href="#database-schema">Database Schema</a>
-- <a href="#ui-/-ux-design">UI/UX Design</a>
+- <a href="#ui-and-ux-design">UI/UX Design</a>
 - <a href="#user-flow">User Flow</a>
 - <a href="#testing">Testing</a>
 - <a href="#bug-fixes-and-manual-testing-with-screenshots">Bug Fixes and Manual Testing with Screenshots</a>
@@ -60,7 +60,7 @@
 - The diagram below represents users, profiles, blog posts, and favorites with relationships between them.
 - ![image](https://github.com/user-attachments/assets/147164a1-b75a-46fe-901c-2298c4f4a803)
 
-# UI/UX Design
+# UI and UX Design
 - Wireframes:
   - Desktop ![image](https://github.com/user-attachments/assets/ca57f0a7-73a3-42cc-9d14-156a7207bfae)
   - Tablet ![image](https://github.com/user-attachments/assets/4a4444b6-cf4a-4af7-86c1-ea1e2696d961)
