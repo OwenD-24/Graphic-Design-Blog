@@ -63,9 +63,11 @@
    Django Unit Tests: Covered models and views to confirm correct data handling, template rendering, and appropriate HTTP responses.
 - Manual Testing: 
    User Actions: Verified user flows like registration, login, CRUD operations (Create, Read, Update, Delete) to ensure smooth user experience and access control.
+  
    UI Responsiveness: Checked the interface across different devices for layout adaptability and readability.
-
- - UI Responsiveness Test
+  
+# Bug Fixes and Manual Testing with Screenshots
+- UI Responsiveness Test
    - Ensured that the layout and styling of the application adapt well to various screen sizes, ensuring good mobile and desktop usability.
   ![image](https://github.com/user-attachments/assets/99046d14-be0f-430a-81f1-1e2c596c8c62)
 - Registration and Login Test
