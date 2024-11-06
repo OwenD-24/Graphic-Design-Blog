@@ -1,8 +1,8 @@
 # Graphic Design Blog
 
 # Table of Contents
-- ![Project Overview](https://github.com/OwenD-24/Graphic-Design-Blog?tab=readme-ov-file#project-overview)
-- ![Features](https://github.com/OwenD-24/Graphic-Design-Blog?tab=readme-ov-file#features)
+- [Project Overview]
+- ![Features]
 - ![User Stories]
 - ![Technologies Used]
 - ![Installation & Setup]
