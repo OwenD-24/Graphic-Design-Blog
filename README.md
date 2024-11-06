@@ -72,48 +72,59 @@
 
 - **Registration and Login Test**: 
    - Tested the registration and login flows to ensure users can create accounts, log in, and access their profiles.
+     
   ![image](https://github.com/user-attachments/assets/5976ac7b-d552-4d7c-adc3-e3ee4476352d)
   ![image](https://github.com/user-attachments/assets/8fdc7034-ea4d-4094-9407-fca6257777a0)
 
 - **Create and Read Posts Test**:
    - Verified that users can create new posts and view them in the blog feed. Confirmed that newly created posts appear correctly.
+     
   ![image](https://github.com/user-attachments/assets/01f84240-1dcc-4faa-ad4f-6216c4344fd9)
   ![image](https://github.com/user-attachments/assets/fbf7e2d4-ce3f-4869-93dc-29bdee31376c)
 
 - **Update Post Test**:
    - Ensured that users can edit their posts and that updates save correctly.
+     
   ![image](https://github.com/user-attachments/assets/916d8e36-601e-416f-819c-6875a1f949f6)
 
 - **User Settings Email Error Handling**:
   - Screenshot showing the user settings page with improved error handling for invalid email formats.
+    
   ![New Bug Fixes 1](https://github.com/user-attachments/assets/a17f4d4b-5f98-4183-9fb5-70fb15f8658a)
 
 - **Footer Link Visibility on Mobile**:
   - Screenshot highlighting the fix for the missing footer links in the site's mobile version.
+    
   ![New Bug Fixes 2](https://github.com/user-attachments/assets/c8e38c2b-e494-4996-81c3-b521d4eb9ae8)
 
 - **Error Message Fix for Empty Blog Post Submission**:
   - Screenshot displaying a corrected error message that appeared when users attempted to submit an empty blog post.
+    
   ![New Bug Fixes 3](https://github.com/user-attachments/assets/91c6787b-7f38-4985-a9ba-22a790824cd9)
 
 - **User Profile Avatar Fix**:
   - Screenshot showing updated user profile page with fixed avatar display and link styling.
+    
   ![New Bug Fixes 4](https://github.com/user-attachments/assets/0ea4c468-fc93-4d08-b64d-25e3366cc077)
 
 - **Mobile View Styling Fix for Blog Post**:
   - Screenshot showing the fix for styling issues in the mobile view of the blog post page.
+    
   ![New Bug Fixes 5](https://github.com/user-attachments/assets/45ddabf7-bb23-446e-ae40-ad6d44510201)
 
 - **Registration Form Fix**:
   - Screenshot of the new registration form showing a fix for the missing "password confirmation" field.
+    
   ![New Bug Fixes 6](https://github.com/user-attachments/assets/af3b5819-85f2-4602-bdfe-25096a33c694)
 
 - **Successful Post Creation Display**:
   - Screenshot indicating that a successful post creation was properly displayed, confirming the fix for display issues with post rendering.
+    
   ![New Bug Fixes 7](https://github.com/user-attachments/assets/328eff33-4784-4eb2-b653-556b66a98cd2)
 
 - **Fixed Blog Post Validation**:
   - Screenshot showing a fixed issue where users could not save a new blog post due to missing form validation checks.
+    
   ![New Bug Fixes 8](https://github.com/user-attachments/assets/1842e555-f237-4550-a142-d91a119a5a54)
 
 - **Delete Function 500 Error**:
@@ -121,18 +132,22 @@
    - Fix: Updated the action URL in the form from `post-delete` to `blog-delete`, aligning with the URL name in `urls.py`.
    - Testing: 
      - Verified that posts are now deletable without errors and redirect correctly, even in production.
+       
   ![image](https://github.com/user-attachments/assets/0135edf2-2131-423a-9d10-489fb0fcf251)
 
 - **User Authentication Checks**:
    - Checked that only authenticated users could create, update, or delete posts, enforcing security and access control.
+     
   ![image](https://github.com/user-attachments/assets/8c6c8454-657c-489e-ae23-a0a6e0d149e2)
 
 - **Form Validation Test**:
    - Verified that all forms (registration, post creation, update) show validation errors for invalid inputs, maintaining data integrity.
+     
   ![image](https://github.com/user-attachments/assets/d5b6a56b-cb02-4938-98f7-3cd3061ca490)
 
 - **Bug-Free Navigation and Links Test**:
    - Tested site navigation links to ensure they route correctly, allowing users to browse between pages without issues.
+     
   ![image](https://github.com/user-attachments/assets/b12c38f7-e40f-4703-908f-0a4f3a4a6ec4)
 
 # Deployment
