@@ -64,7 +64,7 @@
 - Wireframes:
   - Desktop ![image](https://github.com/user-attachments/assets/ca57f0a7-73a3-42cc-9d14-156a7207bfae)
   - Tablet ![image](https://github.com/user-attachments/assets/4a4444b6-cf4a-4af7-86c1-ea1e2696d961)
-  - Mobile ![image](https://github.com/user-attachments/assets/ab6dcc47-2a48-4fb9-b06c-78082f328855)
+  - Mobile ![image](https://github.com/user-attachments/assets/66f2ff3e-e07e-481a-86cf-4508235390c0)
 
 - Responsive layout using Bootstrap for mobile and desktop.
   ![image](https://github.com/user-attachments/assets/ebe95a08-90a4-4379-8489-f7262d562800)
