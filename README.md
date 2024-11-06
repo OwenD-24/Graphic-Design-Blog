@@ -16,7 +16,7 @@
 - Future Enhancements
 - Credits
 
-# <h2 id="project-overview">Project Overview</h2>
+# Project Overview
 - **Purpose**: A Graphic Design Blog where users can share, manage, and explore creative content.
 - **Main Features**: User registration, login, profile management, and CRUD operations for blog posts.
 - **Target Audience**: Graphic designers, artists, and design enthusiasts.
