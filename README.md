@@ -1,20 +1,20 @@
 # Graphic Design Blog
 
 # Table of Contents
-- [Project Overview]
-- ![Features]
-- ![User Stories]
-- ![Technologies Used]
-- ![Installation & Setup]
-- ![Usage]
-- ![Database Schema]
-- ![UI/UX Design]
-- ![User Flow]
-- ![Testing]
-- ![Bug Fixes and Manual Testing with Screenshots]
-- ![Deployment]
-- ![Future Enhancements]
-- ![Credits]
+- Project Overview
+- Features
+- User Stories
+- Technologies Used
+- Installation & Setup
+- Usage
+- Database Schema
+- UI/UX Design
+- User Flow
+- Testing
+- Bug Fixes and Manual Testing with Screenshots
+- Deployment
+- Future Enhancements
+- Credits
 
 # Project Overview
 - **Purpose**: A Graphic Design Blog where users can share, manage, and explore creative content.
