@@ -46,7 +46,7 @@
 - **Media Storage**: Cloudinary
 - **Libraries**: Crispy Forms, Summernote, Django-Allauth
 
-# Installation & Setup
+# Installation and Setup
 - Install dependencies: `pip install -r requirements.txt`
 - Set up `.env` file with credentials.
 - Apply migrations: `python manage.py migrate`
