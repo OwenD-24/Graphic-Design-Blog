@@ -11,7 +11,7 @@
 - <a href="#ui-ux-design">UI/UX Design</a>
 - <a href="#user-flow">User Flow</a>
 - <a href="#testing">Testing</a>
-- <a href="#bug-fixes">Bug Fixes and Manual Testing with Screenshots</a>
+- <a href="#bug-fixes-and-manual-testing-with-screenshots">Bug Fixes and Manual Testing with Screenshots</a>
 - <a href="#deployment">Deployment</a>
 - <a href="#future-enhancements">Future Enhancements</a>
 - <a href="#credits">Credits</a>
