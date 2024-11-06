@@ -1,7 +1,7 @@
 # Graphic Design Blog
 
 # Table of Contents
-- Project Overview
+- <a href="#project-overview">Project Overview</a>
 - Features
 - User Stories
 - Technologies Used
@@ -16,7 +16,7 @@
 - Future Enhancements
 - Credits
 
-# Project Overview
+# <h2 id="project-overview">Project Overview</h2>
 - **Purpose**: A Graphic Design Blog where users can share, manage, and explore creative content.
 - **Main Features**: User registration, login, profile management, and CRUD operations for blog posts.
 - **Target Audience**: Graphic designers, artists, and design enthusiasts.
