@@ -59,10 +59,11 @@
 - ![image](https://github.com/user-attachments/assets/ea733ea5-38fa-4e1e-a640-e504198872e9)
 
 # Testing
-- Automated Testing: Django Unit Tests: Covered models and views to confirm correct data handling, template rendering, and appropriate HTTP responses.
+- Automated Testing:
+   Django Unit Tests: Covered models and views to confirm correct data handling, template rendering, and appropriate HTTP responses.
 - Manual Testing: 
- - User Actions: Verified user flows like registration, login, CRUD operations (Create, Read, Update, Delete) to ensure smooth user experience and access control.
- - UI Responsiveness: Checked the interface across different devices for layout adaptability and readability.
+   User Actions: Verified user flows like registration, login, CRUD operations (Create, Read, Update, Delete) to ensure smooth user experience and access control.
+   UI Responsiveness: Checked the interface across different devices for layout adaptability and readability.
 
  - UI Responsiveness Test
    - Ensured that the layout and styling of the application adapt well to various screen sizes, ensuring good mobile and desktop usability.
