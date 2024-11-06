@@ -83,6 +83,38 @@
    - Ensured that users can edit their posts and that updates save correctly.
   ![image](https://github.com/user-attachments/assets/916d8e36-601e-416f-819c-6875a1f949f6)
 
+- **User Settings Email Error Handling**:
+  - Screenshot showing the user settings page with improved error handling for invalid email formats.
+  ![New Bug Fixes 1](https://github.com/user-attachments/assets/a17f4d4b-5f98-4183-9fb5-70fb15f8658a)
+
+- **Footer Link Visibility on Mobile**:
+  - Screenshot highlighting the fix for the missing footer links in the site's mobile version.
+  ![New Bug Fixes 2](https://github.com/user-attachments/assets/c8e38c2b-e494-4996-81c3-b521d4eb9ae8)
+
+- **Error Message Fix for Empty Blog Post Submission**:
+  - Screenshot displaying a corrected error message that appeared when users attempted to submit an empty blog post.
+  ![New Bug Fixes 3](https://github.com/user-attachments/assets/91c6787b-7f38-4985-a9ba-22a790824cd9)
+
+- **User Profile Avatar Fix**:
+  - Screenshot showing updated user profile page with fixed avatar display and link styling.
+  ![New Bug Fixes 4](https://github.com/user-attachments/assets/0ea4c468-fc93-4d08-b64d-25e3366cc077)
+
+- **Mobile View Styling Fix for Blog Post**:
+  - Screenshot showing the fix for styling issues in the mobile view of the blog post page.
+  ![New Bug Fixes 5](https://github.com/user-attachments/assets/45ddabf7-bb23-446e-ae40-ad6d44510201)
+
+- **Registration Form Fix**:
+  - Screenshot of the new registration form showing a fix for the missing "password confirmation" field.
+  ![New Bug Fixes 6](https://github.com/user-attachments/assets/af3b5819-85f2-4602-bdfe-25096a33c694)
+
+- **Successful Post Creation Display**:
+  - Screenshot indicating that a successful post creation was properly displayed, confirming the fix for display issues with post rendering.
+  ![New Bug Fixes 7](https://github.com/user-attachments/assets/328eff33-4784-4eb2-b653-556b66a98cd2)
+
+- **Fixed Blog Post Validation**:
+  - Screenshot showing a fixed issue where users could not save a new blog post due to missing form validation checks.
+  ![New Bug Fixes 8](https://github.com/user-attachments/assets/1842e555-f237-4550-a142-d91a119a5a54)
+
 - **Delete Function 500 Error**:
    - Issue: A 500 error was encountered during post deletion due to an incorrect URL name in `post_confirm_delete.html`.
    - Fix: Updated the action URL in the form from `post-delete` to `blog-delete`, aligning with the URL name in `urls.py`.
