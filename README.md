@@ -5,10 +5,10 @@
 - <a href="#features">Features</a>
 - <a href="#user-stories">User Stories</a>
 - <a href="#technologies-used">Technologies Used</a>
-- <a href="#installation-setup">Installation & Setup</a>
+- <a href="#installation-&-setup">Installation & Setup</a>
 - <a href="#usage">Usage</a>
 - <a href="#database-schema">Database Schema</a>
-- <a href="#ui-ux-design">UI/UX Design</a>
+- <a href="#ui-/-ux-design">UI/UX Design</a>
 - <a href="#user-flow">User Flow</a>
 - <a href="#testing">Testing</a>
 - <a href="#bug-fixes-and-manual-testing-with-screenshots">Bug Fixes and Manual Testing with Screenshots</a>
