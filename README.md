@@ -2,19 +2,19 @@
 
 # Table of Contents
 - <a href="#project-overview">Project Overview</a>
-- Features
-- User Stories
-- Technologies Used
-- Installation & Setup
-- Usage
-- Database Schema
-- UI/UX Design
-- User Flow
-- Testing
-- Bug Fixes and Manual Testing with Screenshots
-- Deployment
-- Future Enhancements
-- Credits
+- <a href="#features">Features</a>
+- <a href="#user-stories">User Stories</a>
+- <a href="#technologies-used">Technologies Used</a>
+- <a href="#installation-setup">Installation & Setup</a>
+- <a href="#usage">Usage</a>
+- <a href="#database-schema">Database Schema</a>
+- <a href="#ui-ux-design">UI/UX Design</a>
+- <a href="#user-flow">User Flow</a>
+- <a href="#testing">Testing</a>
+- <a href="#bug-fixes">Bug Fixes and Manual Testing with Screenshots</a>
+- <a href="#deployment">Deployment</a>
+- <a href="#future-enhancements">Future Enhancements</a>
+- <a href="#credits">Credits</a>
 
 # Project Overview
 - **Purpose**: A Graphic Design Blog where users can share, manage, and explore creative content.
