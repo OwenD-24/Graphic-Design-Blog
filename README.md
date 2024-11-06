@@ -8,7 +8,7 @@
 - <a href="#installation-and-setup">Installation and Setup</a>
 - <a href="#usage">Usage</a>
 - <a href="#database-schema">Database Schema</a>
-- <a href="#ui-and-ux-design">UI/UX Design</a>
+- <a href="#ui-and-ux-design">UI and UX Design</a>
 - <a href="#user-flow">User Flow</a>
 - <a href="#testing">Testing</a>
 - <a href="#bug-fixes-and-manual-testing-with-screenshots">Bug Fixes and Manual Testing with Screenshots</a>
