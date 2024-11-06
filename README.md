@@ -59,16 +59,39 @@
 - ![image](https://github.com/user-attachments/assets/ea733ea5-38fa-4e1e-a640-e504198872e9)
 
 # Testing
-- Automated Testing: Django unit tests for models and views.
-- Manual Testing: Includes registration, login, CRUD, and UI responsiveness.
+- Automated Testing: Django Unit Tests: Covered models and views to confirm correct data handling, template rendering, and appropriate HTTP responses.
+- Manual Testing: 
+ - User Actions: Verified user flows like registration, login, CRUD operations (Create, Read, Update, Delete) to ensure smooth user experience and access control.
+ - UI Responsiveness: Checked the interface across different devices for layout adaptability and readability.
+
+ - UI Responsiveness Test
+   - Ensured that the layout and styling of the application adapt well to various screen sizes, ensuring good mobile and desktop usability.
   ![image](https://github.com/user-attachments/assets/99046d14-be0f-430a-81f1-1e2c596c8c62)
+- Registration and Login Test
+  - Tested the registration and login flows to ensure users can create accounts, log in, and access their profiles.
   ![image](https://github.com/user-attachments/assets/5976ac7b-d552-4d7c-adc3-e3ee4476352d)
   ![image](https://github.com/user-attachments/assets/8fdc7034-ea4d-4094-9407-fca6257777a0)
+- Create and Read Posts Test
+  - Verified that users can create new posts and view them in the blog feed. Confirmed that newly created posts appear correctly.
   ![image](https://github.com/user-attachments/assets/01f84240-1dcc-4faa-ad4f-6216c4344fd9)
   ![image](https://github.com/user-attachments/assets/fbf7e2d4-ce3f-4869-93dc-29bdee31376c)
+- Update Post Test
+  - Ensured that users can edit their posts and that updates save correctly.
   ![image](https://github.com/user-attachments/assets/916d8e36-601e-416f-819c-6875a1f949f6)
+- Delete Function 500 Error
+  - Issue: A 500 error was encountered during post deletion due to an incorrect URL name in post_confirm_delete.html.
+  - Fix: Updated the action URL in the form from post-delete to blog-delete, aligning with the URL name in urls.py.
+  - Testing:
+    - Verified that posts are now deletable without errors and redirect correctly, even in production.
+  ![image](https://github.com/user-attachments/assets/4d1396f4-c96f-48e0-8e74-beaa18f042fd)
+- User Authentication Checks
+  - Checked that only authenticated users could create, update, or delete posts, enforcing security and access control.
   ![image](https://github.com/user-attachments/assets/8c6c8454-657c-489e-ae23-a0a6e0d149e2)
+- Form Validation Test
+  - Verified that all forms (registration, post creation, update) show validation errors for invalid inputs, maintaining data integrity.
   ![image](https://github.com/user-attachments/assets/d5b6a56b-cb02-4938-98f7-3cd3061ca490)
+- Bug-Free Navigation and Links Test
+  - Tested site navigation links to ensure they route correctly, allowing users to browse between pages without issues.
   ![image](https://github.com/user-attachments/assets/b12c38f7-e40f-4703-908f-0a4f3a4a6ec4)
 
 # Deployment
