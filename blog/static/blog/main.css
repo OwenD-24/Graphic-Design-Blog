@@ -164,7 +164,6 @@ ul {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .post-box:hover {
@@ -178,192 +177,8 @@ ul {
     margin: 0; 
 }
 
-/*--------------------------------Latest Projects Section */
-.latest-projects {
-    width: 94.5%; 
-    margin: 10px auto; 
-    text-align: left; 
-    box-sizing: border-box; 
-}
-
-.latest-projects-container {
-    margin-top: 20px;
-}
-
-.list-group-item-action {
-    width: 100%;
-    color: #035c8f;
-    text-align: inherit;
-}
-
-a {
-    color: #000000;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #000000;
-}
-
-/*--------------------------------About Page Styling */
-.about-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    padding-bottom: 20px;
-}
-
-/*--------------------------------Article Styling */
-.article-title {
-    color: #000000;
-    margin: 0 0 10px;
-}
-
-a.article-title:hover {
-    color: #03e9f4;
-    text-decoration: none;
-}
-
-.article-content {
-    white-space: pre-line;
-    margin-bottom: 10px;
-}
-
-.article-box {
-    display: flex;
-    align-items: flex-start;
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(81, 223, 255, 0.1);
-}
-
-.article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-    object-fit: cover;
-}
-
-/*--------------------------------Post Button Styling */
-.post-btn {
-    background-color: transparent;
-    border: none;
-    color: #03e9f4;
-    font-family: 'Poppins', sans-serif;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.post-btn:hover {
-    background-color: #03e9f4;
-    color: #050801;
-}
-
-.post-btn:focus {
-    outline: none;
-}
-
-/*--------------------------------Article Metadata */
-.article-metadata {
-    padding-bottom: 2px; 
-    margin-bottom: 8px; 
-    font-size: 14px; 
-    border-bottom: 1px solid #e3e3e3;
-    color: #000000 
-}
-
-.article-metadata a {
-    color: #000000; 
-    font-weight: bold; 
-}
-
-.article-metadata .text-muted {
-    color: #000000; 
-    font-style: italic; 
-    margin-left: 5px; 
-}
-
-.text-muted {
-    color: #000000 !important;
-}
-
-/*--------------------------------SVG Icon Styling */
-.article-svg, svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-}
-
-/*--------------------------------Account Section */
-.account-img {
-    height: 150px;
-    width: 150px;
-    margin: 0 auto 20px;
-    display: block;
-    border-radius: 50%;
-    border: 3px solid #03e9f4;
-    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
-}
-
-.profile-details {
-    color: #ffffff;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile-details {
-    color: #000000; 
-}
-
-.profile-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    max-width: 500px;
-    margin: auto;
-}
-
-/*--------------------------------Authentication Links Styling */
-#auth-links {
-    position: relative;
-    display: inline-block;
-    padding: 12px 3px;
-    margin: 10px 0;
-    color: #03e9f4;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-right: 5px;
-    transition: transform 0.3s, color 0.3s;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-#auth-links:hover {
-    font-weight: bold;
-    background: #03e9f4;
-    color: #000000;
-    box-shadow: 0 0 15px #03e9f4, 0 0 40px #03e9f4;
-    transform: scale(1.05); 
-    text-decoration: none;
-}
-
-#profile-h1, .title, #auth-links {
-    font-family: 'Poppins', sans-serif;
-}
-
 /*--------------------------------Button Styling */
-.profile-btn {
+button, .post-btn, .btn-update, .loginagain-btn, .login-btn {
     font-family: 'Poppins', sans-serif;
     background: none;
     color: #03e9f4;
@@ -372,92 +187,31 @@ a.article-title:hover {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.profile-btn:hover {
+button:hover, .post-btn:hover, .btn-update:hover, .loginagain-btn:hover, .login-btn:hover {
     background-color: #03e9f4;
     color: #000000;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.profile-btn:focus {
+button:focus, .post-btn:focus, .btn-update:focus, .loginagain-btn:focus, .login-btn:focus {
     outline: none; 
 }
 
-.btn-update {
-    font-family: 'Poppins', sans-serif;
-    background: none;
-    color: #03e9f4;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 5px;
-    outline: none;
-    text-decoration: none;
+
+/*--------------------------------Favourite and Unfavourite Buttons */
+.favourite-btn {
+    background-color: red; 
+    color: white; 
 }
 
-.btn-update:hover {
-    background-color: #03e9f4;
-    color: #000000;
-    text-decoration: none;
-}
-
-.btn-update:focus {
-    outline: none; 
-}
-
-.loginagain-btn {
-    font-family: 'Poppins', sans-serif;
-    background: none;
-    color: #03e9f4;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 5px;
-    outline: none;
-    text-decoration: none;
-}
-
-.loginagain-btn:hover {
-    background-color: #03e9f4;
-    color: #000000;
-    text-decoration: none;
-}
-
-.loginagain-btn:focus {
-    outline: none; 
-}
-
-.login-btn {
-    font-family: 'Poppins', sans-serif;
-    background: none;
-    color: #03e9f4;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 5px;
-    outline: none;
-    text-decoration: none;
-}
-
-.login-btn:hover {
-    background-color: #03e9f4;
-    color: #000000;
-    text-decoration: none;
-}
-
-.login-btn:focus {
-    outline: none; 
+.unfavourite-btn {
+    background-color: green; 
+    color: white; 
 }
 
 /*--------------------------------Card Styling */
@@ -466,6 +220,7 @@ a.article-title:hover {
     margin: 30px auto; 
     padding: 20px; 
 }
+
 
 /*--------------------------------Profile Image */
 #profile-img {
