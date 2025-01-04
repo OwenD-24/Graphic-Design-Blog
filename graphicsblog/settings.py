@@ -28,10 +28,10 @@ if os.path.isfile("env.py"):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-owend24-graphicdesignbl-skobig2nw4l.ws.codeinstitute-ide.net",
+    "8000-owend24-graphicdesignbl-50cwervrst5.ws.codeinstitute-ide.net",
     "graphics-blog-0f37e68d5715.herokuapp.com",
 ]
 
@@ -91,7 +91,12 @@ TEMPLATES = [
 WSGI_APPLICATION = "graphicsblog.wsgi.application"
 
 # Database Configuration
-DATABASES = {"default": dj_database_url.parse(str(os.environ.get("DATABASE_URL")))}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
