@@ -9,3 +9,7 @@ node_modules/
 cloudinary_python.txt
 .vscode/
 venv/
+db.sqlite3
+*.sqlite3
+.env
+*.env
